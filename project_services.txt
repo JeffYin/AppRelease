@@ -1,0 +1,7 @@
+service-achievement-elem
+service-achievement-sec
+service-attendance
+service-school
+service-staff
+service-student
+service-student-enrolment

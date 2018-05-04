@@ -1,0 +1,6 @@
+GlobalConfig
+frame-common
+frame-dao
+frame-service
+frame-war
+frame-web
