@@ -1,5 +1,5 @@
-SET oldbranch=v.2018.04.00
-SET newBranch=v.2018.07.00
+SET oldbranch=v.2018.07.00
+SET newBranch=v.2018.11.00
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
 FOR %%i IN (%folders%) DO (
