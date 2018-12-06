@@ -1,5 +1,5 @@
-SET branchSour=v.2018.05.00
-SET branchDest=v.2018.07.00
+SET branchSour=v.2018.11.00
+SET branchDest=master
 
 SET folders=^
  service-achievement-elem ^
@@ -16,6 +16,7 @@ FOR %%i IN (%folders%) DO (
     REM Synchronize to the remote source branch
     git checkout %branchSour%
     git reset --hard origin/%branchSour%
+    git pull
 
     REM Synchronize to the remote Dest branch
     git checkout %branchDest%
