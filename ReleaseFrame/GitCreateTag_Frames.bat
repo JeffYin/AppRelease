@@ -1,5 +1,5 @@
-SET branchName=v.2018.07.00
-SET tagName=tag.2018.07.00
+SET branchName=v.2018.11.00
+SET tagName=tag.2018.11.00
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
 FOR %%i IN (%folders%) DO (
@@ -12,6 +12,7 @@ FOR %%i IN (%folders%) DO (
 
     git checkout %branchName%
     git reset --hard origin/%branchName%
+    git pull
     
     REM REM Create Tag: %tagName%.    
     git tag %tagName%

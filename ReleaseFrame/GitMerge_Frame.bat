@@ -1,4 +1,4 @@
-SET branchSour=v.2018.04.00
+SET branchSour=v.2018.11.00
 SET branchDest=master
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
@@ -10,14 +10,16 @@ FOR %%i IN (%folders%) DO (
     REM Synchronize to the remote source branch
     git checkout %branchSour%
     git reset --hard origin/%branchSour%
+    git pull
 
     REM Synchronize to the remote Dest branch
     git checkout %branchDest%
     git reset --hard origin/%branchDest%
+    git pull
 
     git merge --no-ff %branchSour%
 
-    git commit -m "Merged from %branchSour% to %branchDest%. "
+    git commit -m "TRILL-6319 Merged from %branchSour% to %branchDest%. "
     REM git push origin %branchDest%
     cd ..
 )
