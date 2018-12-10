@@ -6,6 +6,7 @@ FOR %%i IN (%folders%) DO (
     cd %%i
     git pull
     git checkout -b %newBranch% %oldbranch%
+    git pull
     
     ..\..\searchReplace.py pom.xml "<version>2018.11.00-SNAPSHOT</version>" "<version>2019.02.00-SNAPSHOT</version>"
 
