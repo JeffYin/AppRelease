@@ -5,7 +5,9 @@ SET folders=service-achievement-elem service-achievement-sec service-attendance 
 FOR %%i IN (%folders%) DO (
     cd %%i
     git checkout %oldbranch%
+    git pull
     git checkout -b %newBranch% %oldbranch%
+    
     
     REM service version
     python ..\..\searchReplace.py pom.xml "<service.version>2018.11.00</service.version>" "<service.version>2019.02.00</service.version>"

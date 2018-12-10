@@ -1,4 +1,4 @@
-SET branchSour=v.5.40.60
+SET branchSour=v.5.41.00
 SET branchDest=master
 
 SET folders=ApplicationsForSchoolAdmin ^
@@ -15,6 +15,7 @@ FOR %%i IN (%folders%) DO (
     REM Synchronize to the remote source branch
     git checkout %branchSour%
     git reset --hard origin/%branchSour%
+    git pull
 
     REM Synchronize to the remote Dest branch
     git checkout %branchDest%

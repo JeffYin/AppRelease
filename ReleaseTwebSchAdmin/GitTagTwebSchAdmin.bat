@@ -1,5 +1,5 @@
-SET branchName=v.5.40.60
-SET tagName=tag.5.40.60
+SET branchName=v.5.41.00
+SET tagName=tag.5.41.00
 SET folders=ApplicationsForSchoolAdmin AdminAttendance IncidentTracking ElementaryAchieveSetup SecondaryAchievementSetup StaffMaintenance StudentMaintenance
 FOR %%i IN (%folders%) DO (
     cd %%i
@@ -10,6 +10,7 @@ FOR %%i IN (%folders%) DO (
 
     git checkout %branchName%
     git reset --hard origin/%branchName%
+    git pull
     
     REM REM Create Tag: %tagName%.    
     git tag %tagName%
