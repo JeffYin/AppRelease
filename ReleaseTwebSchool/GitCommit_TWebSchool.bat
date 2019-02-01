@@ -1,13 +1,12 @@
 SET branchSour=v.2018.04.00
 SET branchDest=master
 
-SET folders=ApplicationsForSchoolAdmin ^
-AdminAttendance ^
-IncidentTracking ^
-ElementaryAchieveSetup ^
-SecondaryAchievementSetup ^
-StaffMaintenance ^
-StudentMaintenance
+SET folders=ApplicationsForSchool ^
+Attendance ^
+ContinueEd ^
+SecondaryAchievement ^
+STA ^
+SecondaryAchievementReportCard
 REM git diff v.5.40.45 master --name-only
 
 FOR %%i IN (%folders%) DO (
