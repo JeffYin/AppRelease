@@ -1,4 +1,4 @@
-SET branchName=v.2018.11.00
+SET branchName=v.2019.02.00
 SET folders=^
  service-achievement-elem ^
  service-achievement-sec ^
@@ -10,7 +10,9 @@ SET folders=^
  
 FOR %%i IN (%folders%) DO (
     cd %%i
+    git fetch
     git checkout %branchName%
+    git pull
     cd ..
 )
     

@@ -1,5 +1,5 @@
-SET oldbranch=v.2018.11.00
-SET newBranch=v.2018.11.01
+SET oldbranch=v.2019.02.00
+SET newBranch=v.2019.04.00
 
 SET folders=^
  service-achievement-elem ^
@@ -18,13 +18,13 @@ FOR %%i IN (%folders%) DO (
     
     
     REM service version
-    python ..\..\searchReplace.py pom.xml "<service.version>2018.11.00</service.version>" "<service.version>2018.11.01</service.version>"
+    python ..\..\searchReplace.py pom.xml "<service.version>2019.02.00</service.version>" "<service.version>2019.04.00</service.version>"
 
     REM Frame Version
-    REM python ..\..\searchReplace.py pom.xml "<version>2018.11.00-SNAPSHOT</version>" "<version>2019.02.00-SNAPSHOT</version>"
+    python ..\..\searchReplace.py pom.xml "<version>2019.02.00-SNAPSHOT</version>" "<version>2019.04.00-SNAPSHOT</version>"
 
     git add pom.xml
-    git commit -m "TRILL-6923 Create the branch for SchAdmin 5.41.00.01 Hot fix"
+    git commit -m "TRILL-7051 Create the branch for 2019.04 release. "
     git push origin %newBranch%
 
     cd ..
