@@ -1,5 +1,5 @@
-SET branchName=v.2018.11.00
-SET tagName=tag.2018.11.00
+SET branchName=v.2019.02.00
+SET tagName=tag.2019.02.00
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
 FOR %%i IN (%folders%) DO (
