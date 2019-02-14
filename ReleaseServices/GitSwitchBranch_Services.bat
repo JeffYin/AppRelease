@@ -15,6 +15,8 @@ FOR %%i IN (%folders%) DO (
     git pull
     cd ..
 )
+
+
     
     
     
