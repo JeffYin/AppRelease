@@ -1,4 +1,4 @@
-SET branchSour=v.5.41.00
+SET branchSour=v.5.41.10
 SET branchDest=master
 
 SET folders=ApplicationsForSchoolAdmin ^
@@ -27,6 +27,6 @@ FOR %%i IN (%folders%) DO (
     git add -A 
     
     git commit -m "Merged from %branchSour% to %branchDest%. "
-    REM git push origin %branchDest%
+    git push origin %branchDest%
     cd ..
 )
