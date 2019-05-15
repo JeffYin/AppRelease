@@ -2,9 +2,8 @@ import json
 import requests
 
 #SCHADMIN_BRANC_NAME AND FRAME_SERVICE_BRANCH_NAME should be modified. 
-SCHADMIN_BRANCH_NAME="v.5.41.10"
-FRAME_SERVICE_BRANCH_NAME="v.2019.02.00"
-
+SCHADMIN_BRANCH_NAME="v.5.41.20"
+FRAME_SERVICE_BRANCH_NAME="v.2019.04.00"
 
 API_TOKEN = "_MQBmEhpR7QWrypLxwXf"
 GIT_URL_BASE = "https://gitswarm.powerschool.com/api/v3"
@@ -14,7 +13,7 @@ SCHADM_PROJECTS = ["eTrillium_ApplicationsForSchoolAdmin", "eTrillium_AdminAtten
 # SCHADM_PROJECTS = ["StudentMaintenance"]
 FRAME_PROJECTS = ["mavenProjectConfig_GlobalConfig", "eTWebFrame_frame-common", "eTWebFrame_frame-dao", "eTWebFrame_frame-service", "eTWebFrame_frame-war", "eTWebFrame_frame-web"]
 SERVICE_PROJECTS = ["eTrillium_TrilliumServices_service-achievement-elem", "eTrillium_TrilliumServices_service-achievement-sec", "eTrillium_TrilliumServices_service-attendance", "eTrillium_TrilliumServices_service-school", "eTrillium_TrilliumServices_service-staff", "eTrillium_TrilliumServices_service-student", "eTrillium_TrilliumServices_service-student-enrolment"]
-
+REPORT_PROJECT=["eTrillium_ReportServer"]
 # Look for the projectId for the given project name. 
 def findAppID(projectName):
     url = '{0}/projects/search/{1}'.format(GIT_URL_BASE,projectName)
@@ -73,6 +72,7 @@ def protectFrames(branchName=FRAME_SERVICE_BRANCH_NAME):
 def protectServices(branchName=FRAME_SERVICE_BRANCH_NAME):
    protectProjects(SERVICE_PROJECTS, branchName)
 
+
 # unProtect the SchAdmin branches. 
 def unProtectSchAdmin(branchName = SCHADMIN_BRANCH_NAME):
     unProtectProjects(SCHADM_PROJECTS, branchName)
@@ -84,9 +84,11 @@ def unProtectServices(branchName=FRAME_SERVICE_BRANCH_NAME):
    unProtectProjects(SERVICE_PROJECTS, branchName)
 
 # protectSchAdmin()
-# unProtectSchAdmin()
 # protectFrames()
-protectServices()
+# protectServices()
 
+# unProtectSchAdmin()
+# unProtectFrame()
+# unProtectServices()
 
-
+protectProjects(REPORT_PROJECT, "master")  #lOCK the master of TrilliumReport. 

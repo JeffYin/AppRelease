@@ -1,5 +1,7 @@
-SET branchName=v.2019.02.00
-SET tagName=tag.2019.02.00
+SET versionToBeTagged=2019.04.00
+
+SET branchName=v.%versionToBeTagged%
+SET tagName=tag.%versionToBeTagged%
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
 FOR %%i IN (%folders%) DO (
