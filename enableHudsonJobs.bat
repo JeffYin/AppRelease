@@ -1,14 +1,14 @@
 SET HodsonJobs=^
-services=service-achievement-elem_v.2019.06.00-Git ^
-service-achievement-sec_v.2019.06.00-Git ^
-service-attendance_v.2019.06.00-Git ^
-service-school_v.2019.06.00-Git ^
-service-staff_v.2019.06.00-Git ^
-service-student-enrolment_v.2019.06.00-Git ^
-service-student_v.2019.06.00-Git ^
-Frame_v.2019.06.00-Git
+services=service-achievement-elem_v.2019.07.00 ^
+service-achievement-sec_v.2019.07.00 ^
+service-attendance_v.2019.07.00 ^
+service-school_v.2019.07.00 ^
+service-staff_v.2019.07.00 ^
+service-student-enrolment_v.2019.07.00 ^
+service-student_v.2019.07.00 ^
+Frame_v.2019.07.00
 
-REM SchoolAdmin_5.41.20-Git 
+REM SchoolAdmin_5.41.20 
 
 REM Enable Jobs
 FOR %%i IN (%HodsonJobs%) DO (
