@@ -1,6 +1,6 @@
 
-SET oldbranch=v.2019.04.00
-SET newBranch=v.2019.06.00
+SET oldbranch=v.2019.06.00
+SET newBranch=v.2019.07.00
 
 SET folders=^
  service-achievement-elem ^
@@ -19,13 +19,13 @@ FOR %%i IN (%folders%) DO (
     
     
     REM service version
-    python ..\..\searchReplace.py pom.xml "<service.version>2019.04.00</service.version>" "<service.version>2019.06.00</service.version>"
+    python ..\..\searchReplace.py pom.xml "<service.version>2019.06.00</service.version>" "<service.version>2019.07.00</service.version>"
 
     REM Frame Version
-    python ..\..\searchReplace.py pom.xml "<version>2019.04.00-SNAPSHOT</version>" "<version>2019.06.00-SNAPSHOT</version>"
+    python ..\..\searchReplace.py pom.xml "<version>2019.06.00-SNAPSHOT</version>" "<version>2019.07.00-SNAPSHOT</version>"
 
     git add pom.xml
-    git commit -m "TRILL-8020 Create the branch for 2019.06 release. "
+    git commit -m "TRILL-7647 Create the branch for 2019.07 release. "
     git push origin %newBranch%
 
     cd ..

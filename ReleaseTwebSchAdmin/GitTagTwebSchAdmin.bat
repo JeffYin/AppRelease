@@ -1,5 +1,5 @@
-SET branchName=v.5.41.10
-SET tagName=tag.5.41.10
+SET branchName=v.5.41.20
+SET tagName=tag.5.41.20
 SET folders=ApplicationsForSchoolAdmin AdminAttendance IncidentTracking ElementaryAchieveSetup SecondaryAchievementSetup StaffMaintenance StudentMaintenance
 FOR %%i IN (%folders%) DO (
     cd %%i

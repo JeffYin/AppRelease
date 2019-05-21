@@ -1,4 +1,4 @@
-SET branchSour=v.2019.04.00
+SET branchSour=v.2019.06.00
 SET branchDest=master
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
@@ -19,7 +19,7 @@ FOR %%i IN (%folders%) DO (
 
     git merge --no-ff %branchSour%
 
-    git commit -m "TRILL-7940 Merged from %branchSour% to %branchDest%. "
+    git commit -m "TRILL-7647 Merged from %branchSour% to %branchDest%. "
     git push origin %branchDest%
     cd ..
 )

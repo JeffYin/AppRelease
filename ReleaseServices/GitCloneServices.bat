@@ -5,4 +5,3 @@ call git clone git@gitswarm.powerschool.com:SRB-Trillium/eTrillium_TrilliumServi
 call git clone git@gitswarm.powerschool.com:SRB-Trillium/eTrillium_TrilliumServices_service-staff.git service-staff
 call git clone git@gitswarm.powerschool.com:SRB-Trillium/eTrillium_TrilliumServices_service-student.git service-student
 call git clone git@gitswarm.powerschool.com:SRB-Trillium/eTrillium_TrilliumServices_service-student-enrolment.git service-student-enrolment
-call git clone git@gitswarm.powerschool.com:SRB-Trillium/eTrillium_TrilliumServices_service-template.git service-template

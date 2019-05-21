@@ -1,4 +1,4 @@
-SET branchSour=v.2018.04.00
+SET branchSour=v.5.41.20
 SET branchDest=master
 
 SET folders=ApplicationsForSchoolAdmin ^

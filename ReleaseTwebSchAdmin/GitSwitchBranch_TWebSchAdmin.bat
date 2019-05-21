@@ -1,4 +1,4 @@
-SET branchSour=v.5.40.60
+SET branchSour=v.5.41.20
 
 SET folders=ApplicationsForSchoolAdmin ^
 AdminAttendance ^
@@ -13,6 +13,8 @@ FOR %%i IN (%folders%) DO (
    
     REM Synchronize to the remote source branch
     git checkout %branchSour%
+
+    git pull
 
     cd ..
 )
