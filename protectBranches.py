@@ -87,8 +87,8 @@ def unProtectServices(branchName=FRAME_SERVICE_BRANCH_NAME):
 # protectFrames()
 # protectServices()
 
-# unProtectSchAdmin()
-# unProtectFrame()
-# unProtectServices()
+unProtectSchAdmin()
+unProtectFrame()
+unProtectServices()
 
-protectProjects(REPORT_PROJECT, "master")  #lOCK the master of TrilliumReport. 
+# protectProjects(REPORT_PROJECT, "master")  #lOCK the master of TrilliumReport. 
