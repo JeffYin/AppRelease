@@ -5,14 +5,14 @@ import os
 import searchReplace as sr
 
 
-oldVer="5.41.20"
-newVer="5.42.00"
+oldVer="5.42.00"
+newVer="5.42.10"
 newJobTab="2019.07"
 hudsonURL="http://trdev-001.srb-es.com:8080/hudson"
 # hudsonURL="http://localhost:8888/hudson"
 jobs=["SchoolAdmin"]
 confugureXML="config.xml"
-OLD_JOB_NAME_PATTERN="{name}_{ver}-Git"
+OLD_JOB_NAME_PATTERN="{name}_{ver}"
 NEW_JOB_NAME_PATTERN="{name}_{ver}"
 HEADERS={'Content-type':"application/x-www-form-urlencoded"}
 
