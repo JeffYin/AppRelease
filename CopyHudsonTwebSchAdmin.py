@@ -5,6 +5,7 @@ import os
 import searchReplace as sr
 
 
+
 oldVer="5.42.00"
 newVer="5.42.10"
 newJobTab="2019.07"
