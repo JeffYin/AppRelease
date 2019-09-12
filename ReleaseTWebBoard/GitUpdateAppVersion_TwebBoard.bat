@@ -16,7 +16,7 @@ REM Modify parent version
 REM ..\..\searchReplace.py pom-ver.xml "<version>2018.11.00-SNAPSHOT</version>" "<version>2019.02.00-SNAPSHOT</version>"
 
 REM App version
-..\..\searchReplace.py pom-ver.xml "<app.version.major.number>5.41.00</app.version.major.number>" "<app.version.major.number>5.42.00</app.version.major.number>"
+..\..\searchReplace.py pom-ver.xml " <app.version.minor.number></app.version.minor.number>" " <app.version.minor.number>.01</app.version.minor.number>"
 
 REM Service version
 REM ..\..\searchReplace.py pom-ver.xml "<service.version>2018.11.00</service.version>" "<service.version>2019.02.00</service.version>"
@@ -30,10 +30,10 @@ FOR %%i IN (%folders%) DO (
     git checkout  %newBranch% 
     
     REM Parent Version
-    python ..\..\searchReplace.py pom.xml "<version>5.41.00-SNAPSHOT</version>" "<version>5.42.00-SNAPSHOT</version>"
+    python ..\..\searchReplace.py pom.xml "<version>5.42.00-SNAPSHOT</version>" "<version>5.42.00.01-SNAPSHOT</version>"
 
     git add pom.xml
-    git commit -m "TRILL-6319 Create the branch for 2019.02 release."
+    git commit -m "TRILL-8708 Created the v.5.42.00.01."
     git push --set-upstream origin %newBranch%
 
     cd ..

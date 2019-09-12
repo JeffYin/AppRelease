@@ -4,11 +4,11 @@ import sys
 import os
 
 
-oldVer="v.2019.04.00"
-newVer="v.2019.06.00"
-newJobTab="2019.06"
-# hudsonURL="http://trdev-001.srb-es.com:8080/hudson"
-hudsonURL="http://localhost:8888/hudson"
+oldVer="v.2019.07.00"
+newVer="v.2019.09.00"
+newJobTab="2019.09"
+hudsonURL="http://trdev-001.srb-es.com:8080/hudson"
+# hudsonURL="http://localhost:8888/hudson"
 jobs=["service-achievement-elem", \
         "service-achievement-sec", \
         "service-attendance", \
@@ -18,7 +18,7 @@ jobs=["service-achievement-elem", \
         "service-student" \
      ]
 confugureXML="config.xml"
-JOB_NAME_PATTERN="{name}_{ver}-Git"
+JOB_NAME_PATTERN="{name}_{ver}"
 HEADERS={'Content-type':"application/x-www-form-urlencoded"}
 
 def updateBranchSpec(configureFile, newVer):
