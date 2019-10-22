@@ -7,13 +7,15 @@ ElementaryAchieveSetup ^
 SecondaryAchievementSetup ^
 StaffMaintenance ^
 StudentMaintenance
+REM git diff v.5.40.45 master --name-only
 
 FOR %%i IN (%folders%) DO (
     cd %%i
-   
-    REM Synchronize to the remote source branch
-    git checkout %branchSour%
-
+    
+    REM ADD all changes
     git pull
+
+    git push
+    
     cd ..
 )
