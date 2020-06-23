@@ -5,14 +5,16 @@ REM )
 
 REM Enable Hudson Jobs
 SET HodsonJobs=^
-SET services=service-achievement-elem_v.2019.07.00 ^
-service-achievement-sec_v.2019.07.00 ^
-service-attendance_v.2019.07.00 ^
-service-school_v.2019.07.00 ^
-service-staff_v.2019.07.00 ^
-service-student-enrolment_v.2019.07.00 ^
-service-student_v.2019.07.00 ^
-Frame_v.2019.07.00
+SET services=service-achievement-elem_v.2020.01.00 ^
+service-achievement-sec_v.2020.01.00 ^
+service-attendance_v.2020.01.00 ^
+service-school_v.2020.01.00 ^
+service-staff_v.2020.01.00 ^
+service-student-enrolment_v.2020.01.00 ^
+service-student_v.2020.01.00 ^
+Frame_v.2020.01.00 ^
+SchoolAdmin_5.42.20 ^
+SchoolAdmin_5.42.30 
 
 REM SchoolAdmin_5.41.20-Git 
 REM DISABLE Jobs

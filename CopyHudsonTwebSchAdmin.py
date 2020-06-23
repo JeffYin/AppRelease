@@ -6,9 +6,9 @@ import searchReplace as sr
 
 
 
-oldVer="5.42.10"
-newVer="5.42.20"
-newJobTab="2019.09"
+oldVer="5.42.30"
+newVer="5.42.40"
+newJobTab="2020.08"
 hudsonURL="http://trdev-001.srb-es.com:8080/hudson"
 # hudsonURL="http://localhost:8888/hudson"
 jobs=["SchoolAdmin"]
