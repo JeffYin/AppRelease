@@ -1,5 +1,5 @@
 SET branchName=master
-SET tagName=tag.5.43.00
+SET tagName=tag.5.43.10
 SET folders=ApplicationsForSchool ^
 Attendance ^
 ContinueEd ^
