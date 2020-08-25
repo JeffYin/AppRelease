@@ -1,4 +1,4 @@
-SET branchSour=v.5.42.30
+SET branchSour=v.5.42.40
 
 SET folders=ApplicationsForSchoolAdmin ^
 AdminAttendance ^
