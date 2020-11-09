@@ -1,5 +1,10 @@
-SET oldbranch=v.2020.11.00
-SET newBranch=v.2020.11.01
+SET baseVersion=2020.11.01
+SET newVersion=2020.12.00
+set ticketNumber=TRILL-9709
+
+SET oldbranch=v.%baseVersion%
+SET newBranch=v.%newVersion%
+
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
 FOR %%i IN (%folders%) DO (
@@ -8,11 +13,11 @@ FOR %%i IN (%folders%) DO (
     git checkout -b %newBranch% %oldbranch%
     git pull
     
-    ..\..\searchReplace.py pom.xml "<version>2020.11.00-SNAPSHOT</version>" "<version>2020.11.01-SNAPSHOT</version>"
-
+    REM ..\..\searchReplace.py pom.xml "<version>2020.11.00-SNAPSHOT</version>" "<version>2020.11.01-SNAPSHOT</version>"
+   ..\..\searchReplace.py pom.xml "<version>%baseVersion%-SNAPSHOT</version>" "<version>%newVersion%-SNAPSHOT</version>"
     git add pom.xml
-    git commit -m "TRILL-9727 Create New Frame &Services version: 2020.11.01"
-    git push origin %newBranch%
+    git commit -m " %ticketNumber% Create New Frame &Services version: %newBranch%"
+    REM git push origin %newBranch%
 
     cd ..
 )
