@@ -1,4 +1,4 @@
-SET branchSour=v.2020.11.00
+SET branchSour=v.2020.11.01
 SET branchDest=master
 
 SET folders=^
