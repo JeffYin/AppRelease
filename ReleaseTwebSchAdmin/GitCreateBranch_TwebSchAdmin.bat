@@ -1,5 +1,12 @@
-SET oldbranch=v.5.42.40
-SET newBranch=v.5.43.00
+SET baseFrameVersion=2020.11.00
+SET newFrameVersion=2020.12.00
+set ticketNumber=TRILL-9709
+
+SET oldAppVersion=5.43.00
+SET newAppVersion=5.43.10
+
+SET oldAppBranch=v.%oldAppVersion%
+SET newAppBranch=v.%newAppVersion%
 
 SET folders=ApplicationsForSchoolAdmin ^
 AdminAttendance ^
@@ -13,28 +20,28 @@ REM modify pom-ver of
 cd ApplicationsForSchoolAdmin
 
 REM Modify parent version
-..\..\searchReplace.py pom-ver.xml "<version>2020.08.00-SNAPSHOT</version>"  "<version>2020.11.00-SNAPSHOT</version>"
+..\..\searchReplace.py pom-ver.xml "<version>%baseFrameVersion%-SNAPSHOT</version>"  "<version>%newFrameVersion%-SNAPSHOT</version>"
 
 REM App version
-..\..\searchReplace.py pom-ver.xml "<app.version.major.number>5.42.40</app.version.major.number>" "<app.version.major.number>5.43.00</app.version.major.number>"
+..\..\searchReplace.py pom-ver.xml "<app.version.major.number>%oldAppVersion%</app.version.major.number>" "<app.version.major.number>%newAppVersion%</app.version.major.number>"
 
 REM Service version
-..\..\searchReplace.py pom-ver.xml "<service.version>2020.08.00</service.version>" "<service.version>2020.11.00</service.version>" 
+..\..\searchReplace.py pom-ver.xml "<service.version>%baseFrameVersion%</service.version>" "<service.version>%newFrameVersion%</service.version>" 
 
 git add pom-ver.xml
 cd ..
 
 FOR %%i IN (%folders%) DO (
     cd %%i
-    REM git checkout %oldbranch%
-    git checkout -b %newBranch% %oldbranch%
+    REM git checkout %oldAppbranch%
+    git checkout -b %newAppBranch% %oldAppBranch%
     
     REM Parent Version
-    python ..\..\searchReplace.py pom.xml "<version>5.42.40-SNAPSHOT</version>" "<version>5.43.00-SNAPSHOT</version>" 
+    python ..\..\searchReplace.py pom.xml "<version>%oldAppVersion%-SNAPSHOT</version>" "<version>%newAppVersion%-SNAPSHOT</version>" 
 
     git add pom.xml
-    git commit -m "TRILL-9587 Create build for TWebSchAdmin 5.43.00"
-    git push --set-upstream origin %newBranch%
+    git commit -m "%ticketNumber% Create build for TWebSchAdmin %newAppBranch%"
+    git push --set-upstream origin %newAppBranch%
 
     cd ..
 )
