@@ -1,5 +1,5 @@
 SET branchName=master
-SET tagName=tag.5.42.00.01
+SET tagName=tag.5.42.10
 SET folders=ApplicationsForBoard ^
 BoardGrouping ^
 EIS ^

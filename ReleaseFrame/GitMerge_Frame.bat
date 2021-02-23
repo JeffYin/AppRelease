@@ -1,4 +1,4 @@
-SET branchSour=v.2020.11.01
+SET branchSour=v.2020.12.00
 SET branchDest=master
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web

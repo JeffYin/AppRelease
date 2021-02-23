@@ -1,9 +1,9 @@
-SET baseFrameVersion=2020.11.00
-SET newFrameVersion=2020.12.00
-set ticketNumber=TRILL-9709
+SET baseFrameVersion=2020.12.00
+SET newFrameVersion=2021.03.00
+set ticketNumber=TRILL-10004
 
-SET oldAppVersion=5.43.00
-SET newAppVersion=5.43.10
+SET oldAppVersion=5.43.10
+SET newAppVersion=5.43.20
 
 SET oldAppBranch=v.%oldAppVersion%
 SET newAppBranch=v.%newAppVersion%

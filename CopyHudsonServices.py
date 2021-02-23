@@ -4,9 +4,9 @@ import sys
 import os
 
 
-oldVer="v.2020.11.00"
-newVer="v.2020.11.01"
-newJobTab="2020.11"
+oldVer="v.2020.12.00"
+newVer="v.2021.03.00"
+newJobTab="2021.03"
 hudsonURL="http://trdev-001.srb-es.com:8080/hudson"
 # hudsonURL="http://localhost:8888/hudson"
 jobs=["service-achievement-elem", \

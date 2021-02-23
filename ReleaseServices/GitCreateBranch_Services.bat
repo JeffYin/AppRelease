@@ -1,7 +1,7 @@
 
-SET baseVersion=2020.11.01
-SET newVersion=2020.12.00
-set ticketNumber=TRILL-9709
+SET baseVersion=2020.12.00
+SET newVersion=2021.03.00
+set ticketNumber=TRILL-10004
 
 SET oldbranch=v.%baseVersion%
 SET newBranch=v.%newVersion%
