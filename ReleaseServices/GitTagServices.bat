@@ -1,5 +1,5 @@
-SET branchName=v.2020.12.00
-SET tagName=tag.2020.12.00
+SET branchName=v.2021.03.00
+SET tagName=tag.2021.03.00
 SET folders=service-achievement-elem service-achievement-sec service-attendance service-school service-staff service-student service-student-enrolment
 FOR %%i IN (%folders%) DO (
     cd %%i
