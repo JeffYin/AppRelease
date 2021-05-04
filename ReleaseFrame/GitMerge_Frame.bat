@@ -1,4 +1,4 @@
-SET branchSour=v.2020.12.00
+SET branchSour=v.2021.03.00
 SET branchDest=master
 
 SET folders=GlobalConfig frame-common frame-dao frame-service frame-war frame-web
@@ -19,7 +19,7 @@ FOR %%i IN (%folders%) DO (
 
     git merge --no-ff %branchSour%
 
-    git commit -m "TRILL-9587 Create build for TWebSchAdmin 5.43.00 Merge Frame 2020.08.00 to the master"
+    git commit -m "TRILL-10131 Create build for TWebEA 5.44.20"
     git push origin %branchDest%
     cd ..
 )
