@@ -1,4 +1,4 @@
-SET versionToBeTagged=2021.05.00
+SET versionToBeTagged=2021.11.00
 
 SET branchName=v.%versionToBeTagged%
 SET tagName=tag.%versionToBeTagged%
